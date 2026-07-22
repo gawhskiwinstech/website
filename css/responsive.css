@@ -1,0 +1,23 @@
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:0 20px;
+
+    }
+
+    .navbar nav{
+
+        gap:16px;
+
+        font-size:.9rem;
+
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+}

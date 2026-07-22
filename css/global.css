@@ -1,0 +1,88 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+:root{
+
+    /* ========================= */
+    /* Colors                    */
+    /* ========================= */
+
+    --pink:#FF8FB8;
+    --blue:#AEEBFF;
+    --green:#BDECB6;
+    --cream:#FFF8F2;
+    --brown:#7A5640;
+    --text:#333333;
+    --white:#FFFFFF;
+
+    /* ========================= */
+    /* Layout                    */
+    /* ========================= */
+
+    --max-width:1200px;
+
+    --section-padding:120px;
+
+    --radius:24px;
+
+    /* ========================= */
+    /* Shadows                   */
+    /* ========================= */
+
+    --shadow-sm:0 4px 12px rgba(0,0,0,.08);
+
+    --shadow-md:0 10px 30px rgba(0,0,0,.10);
+
+    --shadow-lg:0 20px 60px rgba(0,0,0,.15);
+
+}
+
+/* Reset */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Fredoka',sans-serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    padding:120px 24px;
+
+}
+
+.container{
+
+    width:min(100%,var(--max-width));
+
+    margin:auto;
+
+}
