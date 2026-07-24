@@ -1,0 +1,765 @@
+/* ========================================= */
+/* GENERAL SECTION STYLING                   */
+/* ========================================= */
+
+section{
+
+    padding:120px 0;
+
+}
+
+.container{
+
+    width:min(92%,1200px);
+
+    margin:auto;
+
+}
+
+h2{
+
+    font-size:clamp(2.3rem,5vw,3.2rem);
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
+
+/* ========================================= */
+/* ABOUT                                     */
+/* ========================================= */
+
+.about{
+
+    background:#fffdf8;
+
+}
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:28px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+}
+
+.about-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.about-text h2{
+
+    text-align:left;
+
+    margin-bottom:25px;
+
+}
+
+.about-text p{
+
+    margin-bottom:35px;
+
+}
+
+/* ========================================= */
+/* STATS */
+/* ========================================= */
+
+.stats{
+
+    background:linear-gradient(
+        135deg,
+        #fff6fb,
+        #fffdf8
+    );
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat-card h2{
+
+    color:var(--pink);
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    font-weight:600;
+
+}
+/* ========================================= */
+/* LEADERSHIP                                */
+/* ========================================= */
+
+.leadership{
+
+    background:#fff8fc;
+
+}
+.officer-card{
+
+    width:100%;
+    min-height:320px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+/* ========================================= */
+/* EXECUTIVE BOARD GRID                      */
+/* ========================================= */
+
+.executive-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:30px;
+
+    max-width:1100px;
+
+    margin:40px auto 80px;
+
+}
+
+/* ========================================= */
+/* TOP ROW                                   */
+/* President + Vice President                */
+/* ========================================= */
+
+.executive-grid .officer-card:nth-child(1){
+
+    grid-column:1 / 4;
+
+}
+
+.executive-grid .officer-card:nth-child(2){
+
+    grid-column:4 / 7;
+
+}
+
+/* ========================================= */
+/* BOTTOM ROW                                */
+/* Recording / Corresponding / Treasurer     */
+/* ========================================= */
+
+.executive-grid .officer-card:nth-child(3){
+
+    grid-column:1 / 3;
+
+}
+
+.executive-grid .officer-card:nth-child(4){
+
+    grid-column:3 / 5;
+
+}
+
+.executive-grid .officer-card:nth-child(5){
+
+    grid-column:5 / 7;
+
+}
+
+/* ========================================= */
+/* EXECUTIVE CARD STYLING                    */
+/* ========================================= */
+
+.executive-grid .officer-card{
+
+    min-height:340px;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* ========================================= */
+/* EXECUTIVE PHOTOS                          */
+/* ========================================= */
+
+.executive-grid .officer-card img{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+
+}
+
+/* President + VP slightly larger */
+
+.executive-grid .officer-card:nth-child(1) img,
+.executive-grid .officer-card:nth-child(2) img{
+
+    width:160px;
+
+    height:160px;
+
+}
+
+/* ========================================= */
+/* MOBILE FIX                                */
+/* ========================================= */
+
+@media (max-width:768px){
+
+    .executive-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .executive-grid .officer-card:nth-child(1),
+    .executive-grid .officer-card:nth-child(2),
+    .executive-grid .officer-card:nth-child(3),
+    .executive-grid .officer-card:nth-child(4),
+    .executive-grid .officer-card:nth-child(5){
+
+        grid-column:auto;
+
+    }
+
+    .executive-grid .officer-card{
+
+        min-height:280px;
+
+    }
+
+    .executive-grid .officer-card img{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+}
+
+/* ========================================= */
+/* APPOINTED BOARD                           */
+/* ========================================= */
+
+.appointed-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+}
+
+.appointed-grid .officer-card{
+
+    width:100%;
+    min-height:320px;
+
+}
+
+/* ========================================= */
+/* EVENTS                                    */
+/* ========================================= */
+
+.events{
+
+    background:#ffffff;
+
+}
+
+.event-card{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:40px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    margin-bottom:50px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.event-images{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+.event-images img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+
+.event-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.event-info h3{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+}
+
+.event-info p{
+
+    margin-bottom:25px;
+
+    line-height:1.8;
+
+}
+
+.event-details{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.event-details span{
+
+    background:#ffeef7;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+}
+/* ========================================= */
+/* UPCOMING EVENTS */
+/* ========================================= */
+
+.upcoming{
+
+    background:#fffdf8;
+
+}
+
+.timeline{
+
+    max-width:900px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:120px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:#ffd6eb;
+
+    border-radius:999px;
+
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:40px;
+
+    margin-bottom:50px;
+
+    position:relative;
+
+}
+
+.timeline-date{
+
+    font-weight:700;
+
+    color:var(--pink);
+
+    text-align:right;
+
+}
+
+.timeline-content{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.timeline-content h3{
+
+    margin-bottom:12px;
+
+}
+/* ========================================= */
+/* GALLERY                                   */
+/* ========================================= */
+
+.gallery{
+
+    background:#fffafc;
+
+}
+
+.gallery h2{
+
+    margin-bottom:70px;
+
+}
+
+/* ========================================= */
+/* CONTACT                                   */
+/* ========================================= */
+
+.contact{
+
+    background:#fff6fb;
+
+}
+
+.contact h2{
+
+    margin-bottom:60px;
+
+}
+
+/* ========================================= */
+/* DECORATION PLACEHOLDERS                   */
+/* ========================================= */
+
+/*
+These are empty on purpose.
+
+Later your designer can simply drop PNGs
+into theme/decorations and enable them.
+
+Example:
+
+.top-cloud
+.bottom-ticket
+.left-balloon
+.right-apple
+.keroppi
+.cinnamoroll
+.kuromi
+
+No HTML changes needed.
+*/
+
+/* ========================================= */
+/* CUSTOM BACKGROUND SUPPORT                 */
+/* ========================================= */
+
+.custom-background{
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* ========================================= */
+/* IMAGE FRAME SUPPORT                       */
+/* ========================================= */
+
+.frame{
+
+    padding:14px;
+
+    border-radius:28px;
+
+    background:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.10);
+
+}
+
+.frame img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+}
+
+/* ========================================= */
+/* SPACING UTILITIES                         */
+/* ========================================= */
+
+.mt-1{
+
+    margin-top:20px;
+
+}
+
+.mt-2{
+
+    margin-top:40px;
+
+}
+
+.mt-3{
+
+    margin-top:60px;
+
+}
+
+.mb-1{
+
+    margin-bottom:20px;
+
+}
+
+.mb-2{
+
+    margin-bottom:40px;
+
+}
+
+.mb-3{
+
+    margin-bottom:60px;
+
+}
+
+/* ========================================= */
+/* HIDDEN UNTIL FUTURE                       */
+/* ========================================= */
+
+.coming-soon{
+
+    opacity:.65;
+
+    filter:grayscale(20%);
+
+}
+
+/* ========================================= */
+/* BOARD TITLES */
+/* ========================================= */
+
+.board-title{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    margin-top:70px;
+
+    margin-bottom:40px;
+
+    color:var(--pink);
+
+    font-weight:700;
+
+    position:relative;
+
+}
+
+.board-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:100px;
+
+    height:4px;
+
+    background:var(--pink);
+
+    margin:15px auto 0;
+
+    border-radius:999px;
+
+}
+
+/* ========================================= */
+/* FUTURE SANRIO DECORATIONS                 */
+/* ========================================= */
+
+/*
+Version 2.0
+
+Floating Balloons
+
+Ferris Wheel
+
+Cotton Candy
+
+Sparkles
+
+Clouds
+
+Keroppi
+
+Pompompurin
+
+My Melody
+
+Cinnamoroll
+
+Kuromi
+
+Ticket Booth
+
+Popcorn Stand
+
+These will all be absolutely positioned PNGs
+so your Canva designer only has to replace
+the images instead of editing CSS.
+*/
