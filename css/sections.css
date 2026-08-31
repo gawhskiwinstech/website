@@ -33,61 +33,78 @@ p{
 }
 
 /* ========================================= */
-/* ABOUT                                     */
+/* ABOUT SECTION                             */
 /* ========================================= */
 
-.about{
-
-    background:#fffdf8;
-
+.about {
+    position: relative;
+    background-image: url("../theme/backgrounds/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.about-container{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
+/* Dark/soft overlay to make white text readable */
+.about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.12);
+    z-index: 0;
 }
 
-.about-image img{
-
-    width:100%;
-
-    border-radius:28px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.12);
-
+.about .container {
+    position: relative;
+    z-index: 1;
 }
 
-.about-text{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: flex-start; /* Keeps top baseline aligned so shifting image doesn't push grid box */
 }
 
-.about-text h2{
-
-    text-align:left;
-
-    margin-bottom:25px;
-
+/* IMAGE */
+.about-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 0; /* Remove top margin that stretches section height */
 }
 
-.about-text p{
-
-    margin-bottom:35px;
-
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    
+    /* Pushes ONLY the image visual downwards */
+    transform: translateY(120px); 
 }
 
+/* TEXT */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+    padding: 30px;
+}
+
+/* WHITE TEXT */
+.about-text h2 {
+    color: white;
+    text-align: left;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.about-text p {
+    color: white;
+    margin-bottom: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
 /* ========================================= */
 /* STATS */
 /* ========================================= */
@@ -255,13 +272,14 @@ p{
 
 .executive-grid .officer-card img{
 
-    width:140px;
+    width:200px;
 
-    height:140px;
+    height:200px;
 
     border-radius:50%;
 
     object-fit:cover;
+    
 
     margin-bottom:15px;
 
@@ -276,6 +294,13 @@ p{
 
     height:160px;
 
+}
+.executive-grid .officer-card h3 {
+    font-size: 2.0rem; /* Changes the name size */
+}
+
+.executive-grid .officer-card p {
+    font-size: 1.5rem; /* Changes the position/title size */
 }
 
 /* ========================================= */
@@ -340,7 +365,13 @@ p{
     min-height:320px;
 
 }
+.appointed-grid .officer-card h3 {
+    font-size: 2.0rem; /* Match the size you used for the Exec Board */
+}
 
+.appointed-grid .officer-card p {
+    font-size: 1.5rem; /* Match the size you used for the Exec Board */
+}
 /* ========================================= */
 /* EVENTS                                    */
 /* ========================================= */
