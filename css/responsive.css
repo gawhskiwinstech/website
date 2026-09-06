@@ -57,21 +57,31 @@
     }
 
     .hero{
+        padding:120px 20px 24px;
+    }
 
-        padding:130px 20px 70px;
+    .hero-main{
+        grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);
+
+        gap:30px;
+    }
+
+    .hero-decor{
+
+        display:none;
 
     }
 
-    .hero-content{
-
-        padding:45px;
-
+    .hero-image img{
+        height:420px;
     }
 
-    .hero-content h1{
+    .hero-image{
+        height:420px;
+    }
 
-        font-size:3.2rem;
-
+    .hero-decor{
+        display:none;
     }
 
     .officer-grid{
@@ -106,6 +116,13 @@
 
     }
 
+    .purpose-grid,
+    .events .container{
+
+        grid-template-columns:1fr;
+
+    }
+
 }
 
 /* ========================================= */
@@ -115,7 +132,7 @@
 @media (max-width:768px){
 
     section{
-        padding:80px 0;
+        padding:64px 0;
     }
 
     /* ========================= */
@@ -162,28 +179,49 @@
 
     .hero{
 
-        min-height:90vh;
-        padding:120px 20px 60px;
+        padding:104px 20px 20px;
 
     }
 
-    .hero-content{
+    .hero-main{
 
-        width:100%;
-        padding:30px;
+        grid-template-columns:1fr;
 
+        gap:22px;
     }
 
-    .hero-content h1{
+    .hero-image{
+
+        order:1;
+    }
+
+    .hero-copy{
+
+        order:2;
+
+        text-align:center;
+    }
+
+    .hero-decor{
+
+        display:none;
+    }
+
+    .hero-copy h1{
 
         font-size:2.4rem;
-
     }
 
-    .hero-content p{
+    .hero-copy h2{
+
+        text-align:center;
+
+        font-size:1.15rem;
+    }
+
+    .hero-description{
 
         font-size:1rem;
-
     }
 
     .hero-buttons{
@@ -198,7 +236,47 @@
     .hero-buttons button{
 
         width:100%;
+    }
 
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .hero-image img{
+
+        height:260px;
+    }
+
+    .hero-image{
+        height:260px;
+        border-radius:0 28px 28px 0;
+    }
+
+    .hero-stats{
+
+        border-radius:28px;
+
+        gap:12px 0;
+    }
+
+    .service-hours-bear{
+
+        top:-150px;
+
+        left:50%;
+
+        width:135px;
+
+        height:135px;
+
+    }
+
+    .hero-stats div{
+
+        flex-basis:50%;
+
+        border-right:none;
     }
 
     /* ========================= */
@@ -273,7 +351,7 @@
 
     .officer-card{
 
-        min-height:260px;
+        min-height:230px;
 
     }
 
@@ -281,6 +359,14 @@
 
         width:110px;
         height:110px;
+
+    }
+
+    .leadership .officer-avatar{
+
+        width:110px;
+        height:110px;
+        flex-basis:110px;
 
     }
 
@@ -366,19 +452,17 @@
 
 @media (max-width:480px){
 
-    .hero-content{
+    .hero-copy{
 
-        padding:25px;
-
+        padding:10px 0;
     }
 
-    .hero-content h1{
+    .hero-copy h1{
 
         font-size:2.2rem;
-
     }
 
-    .hero-content p{
+    .hero-description{
 
         font-size:.95rem;
 
@@ -426,13 +510,13 @@
 
     .container{
 
-        max-width:1400px;
+        width:var(--landing-width);
 
     }
 
     .hero-content{
 
-        max-width:900px;
+        width:var(--landing-width);
 
     }
 

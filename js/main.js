@@ -51,3 +51,12 @@ document.querySelectorAll(
     observer.observe(item);
 
 });
+
+const leadershipSection = document.querySelector("#leadership");
+const eventsSection = document.querySelector("#events");
+
+if (leadershipSection && eventsSection) {
+
+    eventsSection.after(leadershipSection);
+
+}
