@@ -104,6 +104,22 @@
 
     }
 
+    .leadership .officer-card.scale{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+    .leadership.fade-in{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
     .gallery-grid{
 
         grid-template-columns:repeat(2,1fr);
@@ -262,14 +278,21 @@
 
     .service-hours-bear{
 
-        top:-150px;
+        position:relative;
 
-        left:50%;
+        top:auto;
 
-        width:135px;
+        left:auto;
 
-        height:135px;
+        display:block;
 
+        width:72px;
+
+        height:72px;
+
+        margin:-2px auto 6px;
+
+        transform:none;
     }
 
     .hero-stats div{
